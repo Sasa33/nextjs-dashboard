@@ -16,7 +16,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
   const allPages = generatePagination(currentPage, totalPages);
 
-  const createPageURL = (pageNumber: number) => {
+  const createPageURL = (pageNumber: number | string) => {
     const params = new URLSearchParams(searchParams);
     if (pageNumber === FIRST_PAGE) {
       params.delete('page');
